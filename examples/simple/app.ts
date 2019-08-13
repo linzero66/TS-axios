@@ -1,66 +1,6 @@
 import axios from '../../src/index'
+import qs from 'qs'
 
-// axios({
-//   method: 'get',
-//   url: '/base/get',
-//   params: {
-//     foo: ['bar', 'baz']
-//   }
-// })
-
-// axios({
-//   method: 'get',
-//   url: '/base/get',
-//   params: {
-//     foo: {
-//       bar: 'baz'
-//     }
-//   }
-// })
-
-// const date = new Date()
-
-// axios({
-//   method: 'get',
-//   url: '/base/get',
-//   params: {
-//     date
-//   }
-// })
-
-// axios({
-//   method: 'get',
-//   url: '/base/get',
-//   params: {
-//     foo: '@:$, '
-//   }
-// })
-
-// axios({
-//   method: 'get',
-//   url: '/base/get',
-//   params: {
-//     foo: 'bar',
-//     baz: null
-//   }
-// })
-
-
-// axios({
-//   method: 'get',
-//   url: '/base/get#hash',
-//   params: {
-//     foo: 'hhhhhhh'
-//   }
-// })
-
-// axios({
-//   method: 'get',
-//   url: '/base/get?foo=bar',
-//   params: {
-//     bar: 'baz'
-//   }
-// })
 
 axios({
   method: 'post',
@@ -69,14 +9,22 @@ axios({
     a: 1,
     b: 2
   }
+}).then((res) => {
+  console.log(res)
 })
-
-const arr = new Int32Array([21, 31])
-console.log(arr);
 
 axios({
   method: 'post',
-  url: '/base/buffer',
-  data: arr
+  url: '/base/post',
+  responseType: 'json',
+  data: {
+    a: 3,
+    b: 4
+  }
+}).then((res) => {
+  console.log(res)
 })
+
+
+
 
